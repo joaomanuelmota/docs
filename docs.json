@@ -65,7 +65,14 @@
               "comunicacoes"
             ]
           },
-          "lembretes-automaticos"
+          "lembretes-automaticos",
+          {
+            "group": "Ligações",
+            "icon": "plug",
+            "pages": [
+              "ligacoes/assistentes-de-ia"
+            ]
+          }
         ]
       },
       {
