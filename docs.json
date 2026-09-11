@@ -70,7 +70,9 @@
             "group": "Ligações",
             "icon": "plug",
             "pages": [
-              "ligacoes/assistentes-de-ia"
+              "ligacoes/assistentes-de-ia",
+              "ligacoes/configurar-conector",
+              "ligacoes/dados-partilhados"
             ]
           }
         ]

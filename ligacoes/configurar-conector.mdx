@@ -1,0 +1,119 @@
+---
+title: "Configurar o conector"
+description: "Como ligar o Claude ou o ChatGPT à sua conta Heed, o que verificar no ecrã de autorização e como revogar o acesso."
+---
+
+Ligar um assistente à Heed faz-se em duas fases: **ativar na Heed** e depois **adicionar o conector** na aplicação do assistente. Não existe nenhuma chave para copiar nem palavra-passe para partilhar — a autorização funciona como um "Entrar com o Google".
+
+## 1. Ativar na Heed
+
+<Steps>
+  <Step title="Abrir as Definições">
+    Clique no seu nome na barra lateral e escolha **Definições**. Selecione o separador **Ligações**.
+  </Step>
+  <Step title="Ativar os assistentes de IA">
+    Ligue o interruptor **Assistentes de IA**. Só depois disto é que a Heed aceita ligações.
+  </Step>
+  <Step title="Escolher o que fica acessível">
+    Aparecem as áreas que pode partilhar — Agenda, Finanças e Tarefas — e a forma como os pacientes são identificados. Pode alterar tudo isto mais tarde, sem voltar a ligar o conector. Ver [Dados partilhados](/ligacoes/dados-partilhados).
+  </Step>
+</Steps>
+
+{/* IMAGEM 1: separador Ligações com o interruptor ativo e o endereço do servidor visível */}
+
+O endereço do servidor fica visível nesta página:
+
+```
+https://mcp.myheed.app/mcp
+```
+
+<Note>
+Os botões **Ligar** ao lado do Claude e do ChatGPT copiam este endereço e abrem diretamente a página de conectores da aplicação correspondente. É o caminho mais rápido.
+</Note>
+
+## 2. Ligar no Claude
+
+<Steps>
+  <Step title="Abrir os conectores">
+    No Claude, vá a **Settings → Connectors** e escolha **Add custom connector**.
+  </Step>
+  <Step title="Colar o endereço">
+    Cole `https://mcp.myheed.app/mcp` e dê um nome ao conector, por exemplo *Heed*.
+  </Step>
+  <Step title="Confirmar as opções detetadas">
+    O Claude deteta sozinho o método de autenticação. Deve indicar **Always required** e **Use Anthropic's hosted client metadata**. Não é necessário alterar nada.
+  </Step>
+  <Step title="Autorizar">
+    Ao adicionar, abre-se uma janela no domínio da Heed com o ecrã de autorização. Reveja-o antes de confirmar — ver a secção seguinte.
+  </Step>
+</Steps>
+
+{/* IMAGEM 2: diálogo "Add custom connector" do Claude com o endereço preenchido */}
+{/* IMAGEM 3: conector ligado na lista de Connectors */}
+
+## 3. Ligar no ChatGPT
+
+<Warning>
+No ChatGPT, os conectores personalizados exigem o **developer mode**. É um caminho mais exigente do que o do Claude e nem todos os planos o disponibilizam. Se procura a experiência mais simples, use o Claude.
+</Warning>
+
+<Steps>
+  <Step title="Ativar o developer mode">
+    No ChatGPT, vá a **Definições → Security and login** e ative o **Developer mode**. Em contas Business ou Enterprise, esta opção está em **Workspace Settings → Permissions & Roles → Connected Data** e exige permissões de administrador.
+  </Step>
+  <Step title="Criar a aplicação">
+    Em **Definições → Apps** (pode aparecer como *Connectors*), carregue em **+** para criar uma aplicação em developer mode.
+  </Step>
+  <Step title="Colar o endereço">
+    Indique `https://mcp.myheed.app/mcp` e escolha autenticação por **OAuth**.
+  </Step>
+  <Step title="Autorizar">
+    Abre-se o mesmo ecrã de autorização da Heed. Reveja-o e confirme.
+  </Step>
+</Steps>
+
+{/* IMAGEM 4: developer mode ativo nas definições do ChatGPT */}
+{/* IMAGEM 5: criação da aplicação com o endereço preenchido */}
+
+## O ecrã de autorização
+
+Este ecrã é apresentado pela Heed, não pelo assistente. Vale a pena lê-lo antes de confirmar — é o momento em que decide o que fica acessível.
+
+{/* IMAGEM 6: ecrã "Autorizar acesso à tua conta Heed" */}
+
+Verifique três coisas:
+
+| O quê | Porquê |
+|---|---|
+| **O nome da aplicação** | Deve ser a que acabou de configurar |
+| **O domínio da identidade** | `claude.ai` para o Claude, o domínio da OpenAI para o ChatGPT |
+| **A lista de permissões** | Descreve, em português, tudo aquilo a que a aplicação vai poder aceder |
+
+Se alguma coisa não corresponder ao que espera, escolha **Recusar**. Nenhum acesso é concedido.
+
+<Note>
+Se tiver pedido acesso a dados clínicos sem os ter autorizado nas Definições, o ecrã indica-o de forma destacada e essa permissão **não é concedida**, mesmo que autorize o resto.
+</Note>
+
+## Quando lhe é pedida uma permissão nova
+
+Depois de ligado, pode acontecer que o assistente lhe peça uma autorização adicional a meio de uma conversa — por exemplo, se lhe perguntar por notas clínicas depois de ter ativado essa partilha nas Definições.
+
+Isto é normal e é o comportamento correto. As permissões de uma ligação são fixadas no momento em que é criada; quando ativa uma área nova, a Heed pede a permissão em falta na primeira vez que ela é necessária. Autorize no ecrã que aparece e a conversa continua.
+
+**Não é preciso remover e voltar a adicionar o conector.**
+
+## Rever e revogar
+
+Em **Definições → Ligações**, a tabela **Aplicações ligadas** mostra:
+
+- a aplicação e as permissões que lhe foram concedidas;
+- a data em que a ligação foi criada;
+- a data da última utilização.
+
+O botão de remoção revoga o acesso. O efeito é imediato: o pedido seguinte da aplicação falha.
+
+## Artigos relacionados
+
+- [Assistentes de IA](/ligacoes/assistentes-de-ia) — o que é e o que pode perguntar
+- [Dados partilhados](/ligacoes/dados-partilhados) — o que sai e o que nunca sai

@@ -1,0 +1,85 @@
+---
+title: "Dados partilhados"
+description: "O que fica acessível a um assistente de IA, o que nunca sai da Heed em circunstância nenhuma, e como controlar a identificação dos pacientes."
+---
+
+O que um assistente pode consultar é decidido por si, em dois eixos independentes:
+
+1. **Que áreas** da Heed ficam acessíveis;
+2. **Como os pacientes são identificados** nas respostas.
+
+Ambos se alteram em **Definições → Ligações**, a qualquer momento, e produzem efeito imediato. Não é necessário remover nem voltar a adicionar o conector.
+
+## Que áreas ficam acessíveis
+
+| Área | O que inclui | Estado inicial |
+|---|---|---|
+| **Agenda** | Sessões marcadas e períodos bloqueados | Ligada |
+| **Finanças** | Receitas, despesas e pagamentos em atraso | Ligada |
+| **Tarefas** | As suas tarefas. Não envolve dados de pacientes | Ligada |
+| **Dados clínicos** | Notas clínicas, pontuações e respostas a questionários | **Desligada** |
+
+A lista de pacientes não tem interruptor próprio: praticamente tudo o resto lhe faz referência, e uma sessão sem paciente não diz nada. O que escolhe sobre pacientes é *como são identificados*, não se aparecem.
+
+Desligar uma área fecha-a imediatamente. Se perguntar sobre ela, o assistente responde que essa partilha está desativada na sua conta — não devolve uma resposta vazia que possa ser mal interpretada.
+
+## O que nunca sai da Heed
+
+Independentemente da configuração, e sem exceção, os seguintes dados **não são acessíveis a nenhum assistente**:
+
+- Email e telefone do paciente
+- Número de contribuinte
+- Morada
+- Subsistema de saúde e número de beneficiário
+- Responsável legal e respetivos contactos
+- Dados do segundo titular, nas fichas de casal
+
+Estes campos não são "escondidos por uma definição": não existem na informação que a Heed disponibiliza a um assistente. Nenhuma configuração os desbloqueia.
+
+<Note>
+A ligação é de leitura e um assistente nunca contacta ninguém em seu nome. Não existe, por isso, motivo para partilhar contactos.
+</Note>
+
+## Como os pacientes são identificados
+
+O nome é o **único** dado pessoal de paciente que pode ser partilhado, e só para que reconheça de quem se fala. Tem duas opções:
+
+### Iniciais e número *(predefinição)*
+
+Cada paciente é identificado por uma referência como `JM #128` — as iniciais e o número interno. O nome não sai da Heed.
+
+A referência de cada paciente aparece na respetiva ficha, junto ao nome, para que a reconheça nas respostas do assistente. Pode também procurá-la na pesquisa de pacientes: escreva `JM #128`, ou apenas o número, para chegar à ficha.
+
+### Nome completo
+
+O paciente é identificado pelo nome tal como está registado na aplicação.
+
+<Warning>
+Saber que uma pessoa identificada é sua paciente é, por si só, um dado relativo à saúde, com proteção reforçada ao abrigo do artigo 9.º do RGPD — mesmo que nenhuma nota clínica seja partilhada. Por esse motivo, ativar esta opção exige uma autorização própria, com um texto que lhe é apresentado e cuja aceitação fica registada.
+</Warning>
+
+## Dados clínicos
+
+O conteúdo das notas clínicas, as pontuações de questionários e as respostas dos pacientes formam uma categoria à parte, desligada por omissão.
+
+Uma pontuação com interpretação — um PHQ-9 de 18, por exemplo — é dado de saúde tanto quanto o texto de uma nota, e por isso vive sob o mesmo interruptor.
+
+Ativar esta partilha exige duas coisas independentes:
+
+1. **A sua autorização na Heed**, com um texto de consentimento próprio cuja aceitação fica registada com data;
+2. **A permissão concedida à aplicação**, no ecrã de autorização.
+
+Faltando qualquer uma delas, o conteúdo clínico não é acessível. Retirar a autorização apaga também o registo de consentimento: voltar a ativá-la exige consentir de novo.
+
+<Note>
+Os títulos e as notas que escreve em cada sessão são tratados como conteúdo clínico, e não como simples detalhes de agenda. Só ficam acessíveis com esta partilha ativa.
+</Note>
+
+## Rever o que foi acedido
+
+Em **Definições → Ligações**, a tabela **Aplicações ligadas** mostra, para cada aplicação, as permissões concedidas, a data da ligação e a data da última utilização. É a forma de confirmar se uma ligação continua a ser usada.
+
+## Artigos relacionados
+
+- [Assistentes de IA](/ligacoes/assistentes-de-ia) — o que é e as suas responsabilidades
+- [Configurar o conector](/ligacoes/configurar-conector) — como ligar, passo a passo
