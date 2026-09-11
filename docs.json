@@ -1,0 +1,118 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "almond",
+  "name": "Heed Help Center",
+  "colors": {
+    "primary": "#321C04",
+    "light": "#07C983",
+    "dark": "#15803D"
+  },
+  "navigation": {
+    "pages": [
+      {
+        "group": "Começar",
+        "pages": [
+          "introducao",
+          "organizacao"
+        ]
+      },
+      {
+        "group": "Pacientes",
+        "icon": "user-vneck-hair",
+        "pages": [
+          "adicionar-um-paciente",
+          "pagina-de-pacientes",
+          {
+            "group": "Perfil do Paciente",
+            "pages": [
+              "notas-clinicas",
+              "intervencao-psicologica",
+              "questionarios",
+              "sessoes",
+              "dados-pessoais"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Agendamento e Caléndário",
+        "icon": "calendar-days",
+        "pages": [
+          "agendar-sessao",
+          "pagina-de-sessoes",
+          "integracao-google-meet",
+          "calendario"
+        ]
+      },
+      {
+        "group": "Gestão",
+        "icon": "chart-area",
+        "pages": [
+          "resumo",
+          "despesas",
+          "consultas"
+        ]
+      },
+      {
+        "group": "Recursos",
+        "icon": "file-doc",
+        "pages": [
+          {
+            "group": "Templates",
+            "pages": [
+              "consultas-1",
+              "questionarios-1",
+              "comunicacoes"
+            ]
+          },
+          "lembretes-automaticos"
+        ]
+      },
+      {
+        "group": "Subscrição",
+        "pages": [
+          "planos",
+          "pacientes-ativos-e-inativos",
+          "upgrade-de-plano",
+          "cancelar-subscricao"
+        ]
+      },
+      "definicoes"
+    ]
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Support",
+        "href": "mailto:hello@myheed.app"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Dashboard",
+      "href": "https://dashboard.mintlify.com"
+    }
+  },
+  "contextual": {
+    "options": [
+     "copy",
+     "view",
+     "chatgpt",
+     "claude",
+     "perplexity",
+     "mcp",
+     "cursor",
+     "vscode"
+   ]
+  },
+  "footer": {
+    "socials": {
+      "linkedin": "https://www.linkedin.com/company/myheedapp/",
+      "instagram": "https://www.instagram.com/myheed.app/"
+    }
+  }
+}

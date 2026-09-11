@@ -1,0 +1,287 @@
+---
+title: "Lembretes Automáticos"
+description: "Reduza faltas às consultas e pagamentos em atraso com emails automáticos enviados aos seus pacientes, em seu nome."
+---
+
+Reduza as faltas às consultas e os pagamentos em atraso com emails automáticos enviados aos seus pacientes — em seu nome, sem esforço da sua parte.
+
+## O que são os lembretes automáticos?
+
+A Heed pode enviar automaticamente dois tipos de email aos seus pacientes:
+
+- **Lembretes de consulta** — o paciente recebe um email de manhã, na antecedência que escolher (1, 2 ou 3 dias antes da consulta).
+- **Avisos de pagamento** — o paciente recebe um email quando tem sessões por pagar há mais de um certo número de dias.
+
+Os emails são enviados **em seu nome**: o paciente vê como remetente "Dra. Maria Silva (via Heed)" e, se responder ao email, a resposta chega diretamente à **sua** caixa de correio — não à Heed. É como se tivesse um assistente a enviar os lembretes por si.
+
+<Note>
+  Os lembretes estão **desativados por omissão**. Nada é enviado aos seus pacientes até que os ative nas definições.
+</Note>
+
+---
+
+## Quem aparece como remetente
+
+Antes de falarmos de configurações, vale a pena perceber o que o paciente vê quando recebe um lembrete:
+
+| No email do paciente | O que aparece |
+| --- | --- |
+| **Remetente** | Dra. Maria Silva (via Heed) |
+| **Endereço** | [reminders@tx.myheed.app](mailto:reminders@tx.myheed.app) |
+| **Responder para** | O seu email (o mesmo da sua conta Heed) |
+
+Se o paciente carregar em "Responder", a mensagem chega-lhe diretamente a si. A Heed não recebe, não lê nem reencaminha essas respostas.
+
+### Alterar o nome do remetente
+
+O nome é preenchido automaticamente com o nome da sua conta, mas pode alterá-lo:
+
+1. Abra **Lembretes** na barra lateral.
+2. Clique em **"Definições"**.
+3. No primeiro cartão, **Remetente**, escreva o nome que quer usar — por exemplo, o nome da sua clínica ("Clínica Bem-Estar") em vez do seu nome pessoal.
+4. Por baixo do campo aparece uma pré-visualização exata do que o paciente verá.
+5. Clique em **"Guardar"**.
+
+Para voltar ao nome da sua conta, basta apagar o conteúdo do campo e guardar.
+
+### Porque é que o remetente se define nas Definições e não em cada template
+
+Esta é a dúvida mais comum: ao criar um template, não encontra nenhum campo de remetente — e isso é intencional.
+
+O remetente é a **sua identidade**, não uma característica de cada mensagem. Se fosse definido template a template, o mesmo paciente podia receber o lembrete de consulta de "Clínica Bem-Estar" e o aviso de pagamento de "Maria Silva" — pareceriam duas entidades diferentes, o que confunde o paciente e faz os filtros de spam desconfiarem. Ao defini-lo uma única vez, todas as suas comunicações chegam com a mesma identidade, sempre.
+
+<Tip>
+  Nas **Definições** configura _quem envia_; nos **templates** escreve _o que é enviado_.
+</Tip>
+
+### Porque é que aparece sempre "(via Heed)"
+
+A indicação "(via Heed)" é acrescentada automaticamente e não pode ser removida. Não é publicidade — tem duas funções concretas:
+
+- **Explica ao paciente** porque é que um email assinado por si chega de um endereço `@tx.myheed.app`. Sem essa indicação, a incoerência entre o nome e o endereço levanta suspeitas de fraude.
+- **Protege a entregabilidade.** Os fornecedores de email (Gmail, Outlook) penalizam mensagens em que o nome do remetente não corresponde ao domínio de envio. É por isto que serviços como o Calendly ou o Doctolib fazem exatamente o mesmo.
+
+Ou seja: o "(via Heed)" existe para que os seus lembretes cheguem à caixa de entrada, e não à pasta de spam.
+
+---
+
+## Disponibilidade e limites
+
+Os lembretes automáticos estão disponíveis nos planos **Grow** e **Scale**:
+
+| Plano | Lembretes por mês |
+| --- | --- |
+| Starter | — (não disponível) |
+| Grow | 100 |
+| Scale | 300 |
+
+Cada lembrete conta uma vez, mesmo quando gera mais do que um email (por exemplo, num casal, em que ambos os membros recebem o email). O contador renova no início de cada mês. Pode acompanhar o seu consumo na página **Lembretes**.
+
+---
+
+## Ativar os lembretes
+
+1. Na barra lateral, abra **Lembretes** (secção Recursos).
+2. Clique no botão **"Definições"**, no canto superior direito.
+3. Ative o interruptor **Lembretes de consulta** e escolha quando enviar: **1 dia antes**, **2 dias antes** e/ou **3 dias antes** (pode escolher mais do que uma antecedência — o paciente recebe um email por cada uma).
+4. Ative o interruptor **Avisos de pagamento** e configure:
+   - **Considerar em atraso após (dias)** — quantos dias depois da sessão o pagamento passa a contar como atrasado (ex.: 7).
+   - **No máximo 1 aviso a cada (dias)** — a frequência máxima de avisos por paciente (ex.: 7 = no máximo um aviso por semana).
+5. Se quiser, escolha um **template personalizado** para cada tipo de lembrete. Se não escolher, é usado o template padrão da Heed.
+6. Clique em **"Guardar"**.
+
+A partir deste momento, o sistema trata de tudo: monitoriza as suas consultas e pagamentos e envia os emails no momento certo.
+
+---
+
+## Como e quando os emails são enviados
+
+### Lembretes de consulta
+
+- **Os emails saem sempre de manhã**, no dia correspondente à antecedência escolhida — independentemente da hora da consulta. Exemplo, com "1 dia antes": uma consulta na sexta às 10:00 e outra na sexta às 22:00 recebem ambas o lembrete na manhã de quinta-feira.
+- **Remarcou a consulta para outro dia?** O paciente recebe um novo lembrete, na manhã correspondente à nova data. Não precisa de fazer nada.
+- **Cancelou ou arquivou a consulta?** O lembrete é cancelado automaticamente.
+- **Marcou uma consulta em cima da hora?** Se a marcação for feita depois de o envio da manhã já ter passado, essa consulta fica sem lembrete. Exemplo: uma consulta marcada esta tarde para amanhã já não apanha o envio de hoje de manhã. Nesses casos, convém confirmar diretamente com o paciente.
+- Cada consulta gera **no máximo um email por antecedência escolhida** — nunca há duplicados, mesmo que remarque várias vezes.
+
+### Avisos de pagamento
+
+- O sistema verifica diariamente se cada paciente tem sessões por pagar há mais dias do que o limite que configurou.
+- Quando há valores em atraso, o paciente recebe **um único email com o valor total em dívida** — mesmo que sejam várias sessões, não recebe um email por cada uma.
+- Enquanto a dívida se mantiver, o aviso repete-se respeitando a frequência que definiu (ex.: no máximo 1 por semana).
+- **O paciente pagou?** Assim que marcar as sessões como pagas na Heed, os avisos param automaticamente.
+
+### Requisitos para o envio
+
+- O paciente tem de ter um **email válido na ficha**. Pacientes sem email são simplesmente ignorados (pode ver estes casos no histórico, para corrigir a ficha).
+- Nos **casais**, o email é enviado às duas pessoas (se ambas tiverem email na ficha).
+- Nas **crianças**, o email é enviado ao **responsável** (campo "Email do responsável" na ficha); se não existir, é usado o email da criança.
+
+---
+
+## Templates: personalizar as mensagens
+
+Por omissão, os lembretes usam os templates da Heed — mensagens profissionais, prontas a usar. Mas pode escrever as suas próprias versões.
+
+### Criar um template personalizado
+
+1. Na página **Lembretes**, encontre a lista **Templates Heed**.
+2. Clique no botão de **copiar** no template que quer personalizar ("Lembrete de consulta (automático)" ou "Lembrete de pagamento (automático)"). É criada uma cópia editável em **Os meus templates**.
+3. Abra a cópia e edite:
+   - **Nome do template** — só para sua organização (o paciente não vê).
+   - **Assunto** — o assunto do email.
+   - **Corpo** — o texto da mensagem. Escreva como escreveria um email normal, com parágrafos; não precisa de saber nada de formatação ou HTML.
+4. Clique em **"Guardar"**.
+
+No envio, o seu texto é automaticamente formatado com um layout profissional (tipografia limpa, rodapé com a indicação de que a mensagem foi enviada em seu nome).
+
+### Campos de fusão
+
+Os **campos de fusão** são etiquetas que escreve no template e que são substituídas pelos dados reais de cada paciente no momento do envio. Basta clicar nos botões por baixo dos campos de texto para os inserir — a etiqueta aparece no formato `{{nome_do_campo}}`.
+
+| Campo de fusão | É substituído por | Exemplo |
+| --- | --- | --- |
+| Nome do paciente | O primeiro nome do paciente | Maria |
+| Apelido do paciente | O apelido do paciente | Silva Santos |
+| Nome do psicólogo | O seu nome | Dra. Ana Costa |
+| Data da consulta | Data e hora da consulta | 15/07/2026 às 15:30 |
+| Valor da fatura | Total das sessões por pagar | 120,00 € |
+
+**Exemplo prático.** Se o corpo do template for:
+
+> Olá `{{patient_first_name}}`, lembro-lhe que temos consulta marcada para `{{appointment_date}}`. Até breve, `{{psychologist_name}}`
+
+…a Maria recebe:
+
+> Olá Maria, lembro-lhe que temos consulta marcada para 15/07/2026 às 15:30. Até breve, Dra. Ana Costa
+
+Notas úteis:
+
+- No **assunto** só estão disponíveis o nome e o apelido do paciente; no **corpo** estão disponíveis todos os campos.
+- "Data da consulta" só faz sentido em templates de **lembrete de consulta**; "Valor da fatura" só em templates de **aviso de pagamento**. Se usar um campo no tipo errado, esse espaço fica simplesmente vazio no email.
+- Escreva sempre as etiquetas através dos botões — se as escrever à mão com outro formato (ex.: parênteses retos), não são substituídas.
+
+### Usar o template personalizado
+
+Depois de criar o template, vá a **Definições** e escolha-o no menu **Template do email** do tipo correspondente. O menu só mostra templates criados a partir do template certo — um template de pagamento nunca aparece nas opções de lembrete de consulta.
+
+Se mais tarde apagar o template personalizado, os lembretes voltam automaticamente ao template padrão da Heed — nunca deixam de ser enviados por falta de template.
+
+---
+
+## Controlar por paciente
+
+Por omissão, quando ativa os lembretes, **todos os seus pacientes** ficam abrangidos. Pode excluir pacientes individualmente:
+
+1. Abra a ficha do paciente (botão **"Editar"** no perfil).
+2. Encontre o interruptor **Lembretes automáticos**.
+3. Para excluir o paciente de tudo, desligue o interruptor. Para um controlo mais fino, deixe-o ligado e use as caixas de seleção:
+   - **Lembretes de consulta** — marcada = o paciente recebe lembretes de consulta.
+   - **Avisos de pagamento** — marcada = o paciente recebe avisos de pagamento.
+4. Guarde a ficha.
+
+Exemplo: para um paciente com quem prefere tratar de pagamentos pessoalmente, desmarque apenas "Avisos de pagamento" — ele continua a receber os lembretes de consulta.
+
+<Note>
+  Quando desativa um tipo de lembrete para um paciente, os envios pendentes desse tipo são cancelados automaticamente.
+</Note>
+
+---
+
+## Lembretes em equipa (pacientes partilhados)
+
+Se trabalha em equipa e partilha pacientes com colegas, há três regras a conhecer.
+
+**Cada psicólogo ativa os seus próprios lembretes.** As definições de lembretes são pessoais, não da equipa. Se ativar os lembretes na sua conta, isso não os ativa nas contas dos seus colegas — cada membro da equipa tem de os ativar (e ter um plano que os inclua).
+
+**Quem envia o quê:**
+
+- **Lembretes de consulta** — são enviados por quem tem a consulta na sua agenda. Se um colega marcou a sessão, o email sai em nome dele e, se o paciente responder a pedir para remarcar, a resposta chega a quem tem a agenda — a pessoa certa para tratar do assunto.
+- **Avisos de pagamento** — são enviados pelo psicólogo que **acompanha** o paciente: se o paciente estiver atribuído a um colaborador, valem as definições desse colaborador e o email sai em nome dele; caso contrário, valem as do psicólogo que criou o paciente.
+
+Em ambos os casos, quem envia é quem tem a relação com o paciente — e é a essa pessoa que chegam as respostas.
+
+**Um paciente partilhado nunca recebe lembretes a dobrar.** Cada consulta gera um único lembrete por antecedência, e cada paciente recebe no máximo um aviso de pagamento por dia — mesmo que vários psicólogos tenham acesso à ficha e todos tenham os lembretes ativos.
+
+**As preferências na ficha do paciente são definidas pelo responsável.** As caixas "Lembretes de consulta" e "Avisos de pagamento" na ficha só estão disponíveis ao psicólogo que criou o paciente — mas aplicam-se a todos os envios desse paciente, incluindo os do colaborador.
+
+<Note>
+  Cada lembrete é descontado da quota mensal de quem o envia — os lembretes de consulta contam para o psicólogo que tem a sessão, e os avisos de pagamento para o psicólogo que acompanha o paciente.
+</Note>
+
+---
+
+## Acompanhar os envios
+
+### Na página Lembretes
+
+O gráfico **Utilização mensal** mostra quantos lembretes já foram enviados este mês e quantos ainda tem disponíveis no seu plano. Por baixo, dois indicadores mostram de relance se os lembretes de consulta e os avisos de pagamento estão ativos.
+
+### No perfil de cada paciente
+
+No perfil do paciente, clique no botão **Lembretes** (ícone de sino, junto ao botão Editar). Abre-se um painel com o histórico de todas as comunicações desse paciente, com o estado de cada uma:
+
+| Estado | Significado |
+| --- | --- |
+| **Enviado** | O email foi entregue ao fornecedor de envio, com data, hora e destinatários. |
+| **Agendado** | O lembrete está na fila, à espera da hora de envio. |
+| **Falhou** | O envio falhou após várias tentativas (o motivo fica registado). |
+| **Ignorado** | O lembrete não foi enviado por um motivo válido — o paciente não tem email na ficha, ou a quota mensal foi atingida. |
+| **Cancelado** | O lembrete deixou de fazer sentido — consulta remarcada/cancelada, pagamento regularizado, ou paciente excluído. |
+
+É a resposta rápida à pergunta "o meu paciente recebeu o lembrete?".
+
+---
+
+## Quota mensal
+
+- Cada plano inclui um número de lembretes por mês (Grow: 100, Scale: 300).
+- Um lembrete = um envio a um paciente (num casal, os dois emails contam como um só lembrete).
+- Ao atingir a quota, os lembretes seguintes ficam com o estado "Ignorado" (com o motivo "quota atingida" no histórico) até ao início do mês seguinte — nada fica perdido para sempre, os lembretes de consultas futuras continuam a ser agendados normalmente.
+- O contador renova automaticamente no dia 1 de cada mês.
+
+---
+
+## Perguntas frequentes
+
+<AccordionGroup>
+  <Accordion title="O paciente respondeu ao email do lembrete. Para onde vai a resposta?">
+    Diretamente para o seu email — o mesmo com que se registou na Heed. A Heed não lê nem intercepta as respostas.
+  </Accordion>
+
+  <Accordion title="Posso definir um remetente diferente para cada template?">
+    Não. O remetente define-se uma única vez em **Definições → Remetente** e aplica-se a todos os lembretes, para que o paciente receba sempre as suas mensagens com a mesma identidade. Veja a secção "Quem aparece como remetente" para os detalhes.
+  </Accordion>
+
+  <Accordion title="Posso remover o '(via Heed)' do remetente?">
+    Não. É essa indicação que explica ao paciente — e aos filtros de spam — porque é que o email chega de um domínio da Heed. Removê-la aumentaria significativamente o risco de os lembretes irem parar ao spam.
+  </Accordion>
+
+  <Accordion title="Posso escolher a hora do dia a que os emails saem?">
+    Não. Os lembretes saem todos de manhã, no dia correspondente à antecedência que escolheu. O que pode configurar é _com quantos dias_ de antecedência (1, 2 ou 3), não a hora.
+  </Accordion>
+
+  <Accordion title="O que acontece se remarcar uma consulta depois de o lembrete já ter sido enviado?">
+    O lembrete já enviado não é "desenviado", mas se mudar a consulta para **outro dia**, o paciente recebe um novo lembrete na manhã correspondente à nova data. Se apenas mudar a hora dentro do mesmo dia, não é enviado novo email — nesse caso convém avisar o paciente diretamente. Se a consulta for cancelada, os lembretes por enviar são cancelados.
+  </Accordion>
+
+  <Accordion title="Porque é que um paciente não recebeu o lembrete?">
+    Verifique, por esta ordem: (1) o histórico no perfil do paciente — o estado e o motivo estão lá; (2) se o paciente tem email válido na ficha; (3) se o paciente não está excluído dos lembretes na ficha; (4) se os lembretes estão ativos nas Definições; (5) a sua quota mensal. Se o email consta como "Enviado" e o paciente não o encontra, sugira-lhe que verifique a pasta de spam.
+  </Accordion>
+
+  <Accordion title="Os lembretes enviam SMS ou WhatsApp?">
+    De momento, os lembretes automáticos são enviados por email. Outros canais estão nos nossos planos futuros.
+  </Accordion>
+
+  <Accordion title="Preciso de consentimento dos pacientes para enviar lembretes?">
+    Os lembretes de consulta e avisos de pagamento são comunicações de serviço relacionadas com o acompanhamento que o paciente contratou — não são marketing. Ainda assim, a Heed dá-lhe controlo total: os lembretes são opt-in (só ativa se quiser) e pode excluir qualquer paciente que o solicite, diretamente na ficha. Se um paciente pedir para não receber emails, desligue o interruptor na ficha dele.
+  </Accordion>
+
+  <Accordion title="Mudei de plano. O que acontece?">
+    Ao fazer upgrade, a nova quota aplica-se de imediato. Ao fazer downgrade para o Starter, os lembretes deixam de ser enviados e os pendentes são cancelados — as suas definições e templates ficam guardados para quando voltar a um plano com lembretes.
+  </Accordion>
+
+  <Accordion title="Quanto custa cada email?">
+    Nada além da sua subscrição — os lembretes estão incluídos no plano, dentro da quota mensal.
+  </Accordion>
+</AccordionGroup>
