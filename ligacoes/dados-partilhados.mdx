@@ -1,14 +1,11 @@
 ---
 title: "Dados partilhados"
-description: "O que fica acessível a um assistente de IA, o que nunca sai da Heed em circunstância nenhuma, e como controlar a identificação dos pacientes."
+description: "O que fica acessível a um assistente de IA, o que nunca sai da Heed em circunstância nenhuma, e como os pacientes são identificados."
 ---
 
-O que um assistente pode consultar é decidido por si, em dois eixos independentes:
+O que um assistente pode consultar é decidido por si: escolhe **que áreas** da Heed ficam acessíveis. Os pacientes aparecem sempre por iniciais e número, nunca pelo nome.
 
-1. **Que áreas** da Heed ficam acessíveis;
-2. **Como os pacientes são identificados** nas respostas.
-
-Ambos se alteram em **Definições → Ligações**, a qualquer momento, e produzem efeito imediato. Não é necessário remover nem voltar a adicionar o conector.
+As áreas alteram-se em **Definições → Ligações**, a qualquer momento, e produzem efeito imediato. Não é necessário remover nem voltar a adicionar o conector.
 
 ## Que áreas ficam acessíveis
 
@@ -19,7 +16,7 @@ Ambos se alteram em **Definições → Ligações**, a qualquer momento, e produ
 | **Tarefas** | As suas tarefas. Não envolve dados de pacientes | Ligada |
 | **Dados clínicos** | Notas clínicas, pontuações e respostas a questionários | **Desligada** |
 
-A lista de pacientes não tem interruptor próprio: praticamente tudo o resto lhe faz referência, e uma sessão sem paciente não diz nada. O que escolhe sobre pacientes é *como são identificados*, não se aparecem.
+A lista de pacientes não tem interruptor próprio: praticamente tudo o resto lhe faz referência, e uma sessão sem paciente não diz nada. Os pacientes aparecem sempre pseudonimizados, como se explica mais abaixo.
 
 Desligar uma área fecha-a imediatamente. Se perguntar sobre ela, o assistente responde que essa partilha está desativada na sua conta — não devolve uma resposta vazia que possa ser mal interpretada.
 
@@ -27,6 +24,7 @@ Desligar uma área fecha-a imediatamente. Se perguntar sobre ela, o assistente r
 
 Independentemente da configuração, e sem exceção, os seguintes dados **não são acessíveis a nenhum assistente**:
 
+- Nome do paciente
 - Email e telefone do paciente
 - Número de contribuinte
 - Morada
@@ -42,17 +40,9 @@ A ligação é de leitura e um assistente nunca contacta ninguém em seu nome. N
 
 ## Como os pacientes são identificados
 
-O nome é o **único** dado pessoal de paciente que pode ser partilhado, e só para que reconheça de quem se fala. Tem duas opções:
-
-### Iniciais e número *(predefinição)*
-
-Cada paciente é identificado por uma referência como `JM #128` — as iniciais e o número. O nome não sai da Heed.
+Cada paciente é sempre identificado por uma referência como `JM #128` — as iniciais e o número. O nome não sai da Heed, e não existe nenhuma opção para o partilhar.
 
 A referência de cada paciente aparece na respetiva ficha, junto ao nome, para que a reconheça nas respostas do assistente. Pode também procurá-la na pesquisa de pacientes: escreva `JM #128`, ou apenas o número, para chegar à ficha.
-
-### Nome completo
-
-O paciente é identificado pelo nome tal como está registado na aplicação.
 
 ## Dados clínicos
 
