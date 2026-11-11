@@ -1,71 +1,88 @@
 ---
 title: "Definições"
 icon: "gear"
+description: "Onde ajustas a Heed à forma como trabalhas: calendário, ligações, subscrição, conta e aparência."
 ---
 
-A página de **Definições** permite gerir a sua conta, subscrição e integrações na plataforma.
+Abre as **Definições** pelo teu nome, no fundo da barra lateral. A coluna da esquerda divide-se em três grupos.
 
-Para aceder às definições:
+| Grupo | O que tem |
+|---|---|
+| **Prática** | **Calendário**: disponibilidade (horário, dias com horário próprio e ausências), tipos de sessão, novos pacientes e marcação |
+| **Ligações** | **Google Calendar** e **Assistentes de IA** |
+| **Conta** | **Subscrição**, **Conta** e **Aparência** |
 
-1. No canto inferior da barra de navegação, clique no seu nome.
-2. Clique nos **três pontos verticais**.
-3. Selecione a opção **“Conta”**.
+***
 
-## Será redirecionado para a página de definições.
+## Calendário
 
-## Estrutura da página
+Tudo o que a tua página pública usa para mostrar horas livres está aqui.
 
-A página está organizada em três tabs principais:
+* [Definir a disponibilidade](/definicoes-horario)
+* [Tipos de sessão](/definicoes-tipos-de-sessao)
+* [Receber pedidos de novos pacientes](/definicoes-novos-pacientes)
+* [Regras de marcação](/definicoes-ausencias-e-marcacao)
+* [Cancelar e reagendar sessões](/cancelar-e-reagendar-sessoes)
 
-- **Subscrição** — gestão do plano
-- **Integrações** — ligação a ferramentas externas
-- **Conta** — gestão de dados e conta
+***
 
----
+## Google Calendar
+
+Ao ligares a tua conta Google, as sessões online podem ter um link do Google Meet.
+
+1. Em **Definições**, abre **Google Calendar**.
+2. Clica em **Ligar** e autoriza o acesso na janela do Google.
+3. Para desligares, clica em **Desligar** no mesmo sítio.
+
+### Os eventos do Google no teu calendário
+
+Com o Google ligado, os eventos dos calendários que escolheste, incluindo os pessoais, aparecem no Calendário da Heed com o nome que lhes deste no Google. O que cada um faz depende de como o marcaste no Google:
+
+* **Ocupado:** aparece riscado e **bloqueia as horas** na tua página pública. O paciente deixa de ver livres as horas em que tens o evento, e um evento de dia inteiro bloqueia o dia todo.
+* **Livre:** aparece com a etiqueta **Livre** e **não bloqueia nada**. Serve para teres presente o que está na tua agenda sem tirar horas aos pacientes. Se quiseres que bloqueie, marca-o como Ocupado no Google.
+
+Por omissão conta só o teu calendário principal. Para escolheres outros, ou todos, abre **Definições › Google Calendar** e marca os calendários em **Calendários que te deixam ocupado**. Tem de ficar pelo menos um.
+
+Os eventos a que recusaste o convite não aparecem nem bloqueiam nada. As tuas sessões da Heed não aparecem em duplicado.
+
+Para esconderes estes eventos no Calendário, desliga o botão **Google Calendar** no topo, que também mostra quantos eventos tens à vista. As horas dos eventos Ocupado continuam bloqueadas na página pública. Os pacientes nunca veem o nome dos teus eventos.
+
+Se a ligação ao Google expirar, o Calendário avisa-te. Volta a ligar a conta em **Definições › Google Calendar**. Enquanto isso, os eventos do Google deixam de bloquear horas.
+
+***
+
+## Assistentes de IA
+
+É aqui que ligas o Claude ou o ChatGPT à tua Heed e decides a que dados podem aceder.
+
+1. Em **Definições**, abre **Assistentes de IA**.
+2. Liga o interruptor geral **Assistentes de IA**.
+3. Em **Dados partilhados**, escolhe o que fica acessível: agenda, pacientes, finanças ou tarefas.
+4. Em **Identificação dos pacientes**, escolhe se o assistente vê nomes ou só iniciais.
+
+<Note>
+  O acesso a notas clínicas e a respostas de questionários está desligado por omissão e precisa do teu consentimento explícito. Sem ele, nenhuma aplicação consegue ler esses dados.
+</Note>
+
+Em **Aplicações ligadas** vês as autorizações ativas e podes revogar qualquer uma.
+
+***
 
 ## Subscrição
 
-Na tab **Subscrição**, pode gerir o seu plano na plataforma.
+Mostra o plano ativo (**Starter**, **Grow** ou **Scale**) e o que cada um inclui.
 
-Aqui pode:
+* **Upgrade** abre a comparação de planos e leva ao pagamento.
+* **Faturação** abre o portal do Stripe, onde geres o método de pagamento e consultas as faturas. Só aparece em planos pagos.
+* **Cancelar subscrição** passa-te para o plano Starter no fim do período já pago. Os teus dados ficam guardados.
+* **Reativar** volta atrás, até ao fim do período atual.
 
-- Fazer **upgrade** para um plano superior
-- Ativar uma versão paga (caso esteja em trial)
-- **Cancelar a subscrição**
-
-Ao cancelar, deixará de ter acesso às funcionalidades pagas no final do período ativo.
-
-## Integrações
-
-Na tab **Integrações**, pode ligar a plataforma a serviços externos.
-
-Atualmente, está disponível a integração com o **Google Meet**, que permite:
-
-- Agendar sessões online
-- Gerar automaticamente links de videochamada
-- Enviar convites diretamente para os pacientes
-
-Para ativar, basta clicar em **“Conectar”** e seguir o processo de autenticação.
+***
 
 ## Conta
 
-Na tab **Conta**, pode gerir os seus dados.
+* **Alterar email**: escreve o novo endereço e confirma na mensagem que recebes nesse endereço. A alteração só fica ativa depois da confirmação.
+* **Exportar dados**: descarrega um ficheiro CSV com o teu perfil, a lista de pacientes e as sessões. Não inclui o conteúdo clínico. Para isso, ver [Exportar Dados](/exportar-dados).
+* **Eliminar a conta**: elimina de forma permanente os pacientes, as sessões, as notas e as finanças. Exporta primeiro o que precisares. Se tens uma subscrição paga ativa, cancela-a antes.
+* **Terminar sessão**: clica no teu nome, na barra lateral, e escolhe **Terminar Sessão**.
 
-Aqui pode:
-
-### Exportar dados
-
-- Exportar uma cópia dos dados da conta: o seu perfil, a lista de pacientes e as sessões
-- O ficheiro será gerado em formato **CSV**
-
-Este ficheiro não inclui o conteúdo clínico. Para exportar as notas, as intervenções e os questionários de um paciente num documento Word, use o botão **"Exportar"** no perfil do paciente. Saiba mais em [Exportar Dados](/exportar-dados).
-
-### Eliminar conta
-
-- Eliminar permanentemente a sua conta
-
-Ao eliminar a conta, todos os dados associados (incluindo pacientes, sessões e registos) serão apagados de forma permanente e não poderão ser recuperados.
-
-<Frame>
-  ![Screenshot 2026 04 11 At 09 29 32](/images/Screenshot-2026-04-11-at-09.29.32.png)
-</Frame>

@@ -46,6 +46,28 @@
         ]
       },
       {
+        "group": "Marcação online",
+        "icon": "calendar-check",
+        "pages": [
+          "pagina-publica",
+          "editar-pagina-publica",
+          "pedidos-de-sessao-ativar",
+          "como-o-paciente-pede-sessao",
+          "pedidos-de-sessao-gerir",
+          "cancelar-e-reagendar-sessoes",
+          "adicionar-ao-teu-site",
+          {
+            "group": "Regras e horário",
+            "pages": [
+              "definicoes-horario",
+              "definicoes-tipos-de-sessao",
+              "definicoes-novos-pacientes",
+              "definicoes-ausencias-e-marcacao"
+            ]
+          }
+        ]
+      },
+      {
         "group": "Gestão",
         "icon": "chart-area",
         "pages": [
@@ -110,15 +132,15 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {

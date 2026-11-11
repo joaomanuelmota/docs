@@ -1,0 +1,91 @@
+---
+title: "Cancelar e reagendar sessões"
+description: "Deixa os pacientes cancelarem ou pedirem outra hora a partir do email, dentro do prazo que definires."
+---
+
+Com **Cancelar e reagendar** ligado, o paciente que precisa de mudar uma sessão não tem de falar contigo. Faz tudo a partir do email de confirmação ou do lembrete, e tu continuas a decidir os reagendamentos.
+
+***
+
+## Ligar a opção
+
+A opção está desligada por omissão.
+
+1. Em **Definições › Calendário**, abre **Marcação**.
+2. Liga **Cancelar e reagendar**.
+3. Em **Prazo para mudar**, escolhe **Até 24 horas antes**, **Até 36 horas antes** ou **Até 48 horas antes**.
+
+Depois do prazo, o paciente já não consegue mudar a sessão sozinho e é remetido para ti. O prazo conta em hora de Lisboa, até ao início da sessão.
+
+<Note>
+  Esta opção vive no teu perfil público. Precisas de ter o perfil criado e os pedidos de sessão ligados, em **Recursos › Perfil**, como em [Ativar os pedidos de sessão](/pedidos-de-sessao-ativar).
+</Note>
+
+***
+
+## O que o paciente vê
+
+Com a opção ligada, o email de **sessão confirmada** e o **lembrete** da sessão trazem dois botões: **Reagendar** e **Cancelar sessão**. Os botões abrem uma página própria da sessão, **A sua sessão com** o teu nome, sem o paciente precisar de conta. O link é pessoal de cada sessão, por isso só quem recebeu o email o consegue abrir.
+
+A página diz até quantas horas antes se pode mudar a sessão ("Pode mudar a sessão até 24 horas antes").
+
+### Cancelar
+
+1. O paciente clica em **Cancelar sessão**.
+2. A página pergunta **Cancelar sessão?** e lembra que a sessão sai da tua agenda.
+3. Ao confirmar, a sessão é cancelada e o paciente vê a confirmação de que o aviso já te chegou.
+
+### Reagendar
+
+1. O paciente clica em **Reagendar**.
+2. Em **Escolha a nova hora**, vê as horas livres para o mesmo tipo de sessão, no mesmo local. A hora que já tem não conta como ocupada.
+3. Clica em **Pedir nova hora**.
+
+A sessão **mantém-se na hora antiga até aceitares a nova**, a não ser que tenhas ligado a aprovação automática de reagendamentos. O paciente recebe um email a dizer que o pedido foi enviado. Enquanto o pedido está por decidir, a página da sessão diz que já foi pedida uma nova hora e o paciente não pode pedir outra.
+
+***
+
+## O que recebes
+
+### Quando o paciente cancela
+
+* A sessão é **eliminada** da tua agenda. A Heed não tem o estado "cancelada": cancelar é eliminar, como quando eliminas uma sessão tu.
+* Se a sessão tinha um evento no Google Calendar, o evento sai também.
+* Recebes um email, **Sessão cancelada**, e uma notificação na campainha: "Ana Silva cancelou a sessão de 12 de novembro, às 10:00".
+
+### Quando o paciente pede para reagendar
+
+* Recebes um email, **Pedido de reagendamento**, e uma notificação na campainha.
+* O pedido aparece no **Dashboard**, no cartão **Pedidos de sessão**, com a etiqueta **Reagendamento** e, junto, a hora antiga ("antes: 12 nov, 10:00").
+* Enquanto o pedido está pendente, a hora antiga **fica livre** para outros pacientes pedirem, e só a hora nova fica reservada.
+
+***
+
+## Aceitar ou recusar um reagendamento
+
+Funciona como os outros pedidos de sessão, em [Aceitar ou recusar pedidos de sessão](/pedidos-de-sessao-gerir).
+
+* **Aceitar**: a sessão passa para o novo dia e hora. Mantém o paciente, o tipo, o valor e o estado de pagamento. O paciente recebe um email, **Sessão reagendada**.
+* **Recusar**: a sessão continua na hora antiga. O paciente recebe um email, **Nova hora não aceite**, com a tua mensagem (se escreveste uma) e a hora que se mantém.
+
+***
+
+## Aprovar reagendamentos automaticamente
+
+Se não queres decidir cada reagendamento, liga **Aprovar automaticamente reagendamentos** em **Definições › Calendário › Marcação**. O interruptor só aparece com **Cancelar e reagendar** ligado. A sessão passa logo para a nova hora, o paciente vê **Sessão marcada** e recebe o email, e tu recebes um email **Sessão reagendada** com a hora antiga e a nova. Ver [Aprovação automática](/definicoes-ausencias-e-marcacao#aprovação-automática).
+
+***
+
+## Quando não é possível mudar
+
+A página do paciente avisa-o e manda-o falar contigo quando:
+
+* a opção está desligada;
+* já passou o prazo, e aparece **Já não é possível mudar esta sessão aqui**;
+* o link não é válido ou a sessão já não existe;
+* a sessão já tem um pedido de reagendamento por decidir;
+* a hora que o paciente escolheu foi ocupada entretanto, e é-lhe pedido que escolha outra.
+
+<Tip>
+  Se precisares de impedir mudanças de última hora, escolhe o prazo de 48 horas. Se preferires falar sempre com o paciente, deixa a opção desligada.
+</Tip>
